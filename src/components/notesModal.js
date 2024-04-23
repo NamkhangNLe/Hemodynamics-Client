@@ -18,7 +18,7 @@ function NotesModal({ id }) {
            * @returns {Promise<void>} A promise that resolves when the record is deleted.
            */
     async function getNotes(id) {
-        const response = await fetch(`http://localhost:5000/record/${id}`);
+        const response = await fetch(`${process.env.REACT_API_BASE_URL}/record/${id}`);
         if (!response.ok) {
             const message = `An error has occurred: ${response.statusText}`;
             window.alert(message);
