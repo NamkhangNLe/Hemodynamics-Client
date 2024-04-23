@@ -29,7 +29,7 @@ export async function submitOne(event, patientObj, form) {
     const newCalculation = { selectedPatientID: patientObj._id.toString(), ...form };
 
     // Send a POST request to the server to create a new calculation record.
-    fetch(`${process.env.REACT_API_BASE_URL}/calculation/add`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/calculation/add`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -78,7 +78,7 @@ export async function submitAll(event, patientObj, calculations) {
         };
 
         // Send a POST request to the server to create a new calculation record.
-        fetch(`${process.env.REACT_API_BASE_URL}/calculation/add`, {
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/calculation/add`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

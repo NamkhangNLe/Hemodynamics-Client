@@ -69,7 +69,7 @@ const CalculatorFramework = () => {
     // Fetches all patient records from the database.
     useEffect(() => {
         async function getRecords() {
-            const response = await fetch(`${process.env.REACT_API_BASE_URL}/record/`);
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/record/`);
             if (!response.ok) {
                 const message = `An error occurred: ${response.statusText}`;
                 window.alert(message);
@@ -94,7 +94,7 @@ const CalculatorFramework = () => {
     // Subsequently updates selectedPatient (initials) and selectedPatientID upon selection.
     useEffect(() => {
         async function getPatientObj() {
-            const response = await fetch(`${process.env.REACT_API_BASE_URL}/record/${selectedPatientID}`);
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/record/${selectedPatientID}`);
             if (!response.ok) {
                 const message = `An error occurred: ${response.statusText}`;
                 window.alert(message);

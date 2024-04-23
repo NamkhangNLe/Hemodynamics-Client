@@ -77,7 +77,7 @@ export default function Create() {
 
         try {
             // Send a POST request to the server to create a new record.
-            const response = await fetch(`${process.env.REACT_API_BASE_URL}/record/add`, {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/record/add`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

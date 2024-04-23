@@ -16,7 +16,7 @@ function DeleteModal({ id }) {
            * @returns {Promise<void>} A promise that resolves when the record is deleted.
            */
     async function deleteRecord(id) {
-        fetch(`${process.env.REACT_API_BASE_URL}/${id}`, {
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/${id}`, {
             method: "DELETE"
         });
     }

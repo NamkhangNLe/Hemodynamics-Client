@@ -55,7 +55,7 @@ export default function RecordList() {
     // This method fetches the records from the database.
     useEffect(() => {
         async function getRecords() {
-            const response = await fetch(`${process.env.REACT_API_BASE_URL}/record/`);
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/record/`);
             if (!response.ok) {
                 const message = `An error occurred: ${response.statusText}`;
                 window.alert(message);
@@ -65,7 +65,7 @@ export default function RecordList() {
             setRecords(records);
         }
         getRecords();
-    }, [records.length]);
+    }, []);
 
     async function archiveRecord(record) {
         const archivedPerson = {
@@ -73,7 +73,7 @@ export default function RecordList() {
             archived: true
         };
 
-        fetch(`${process.env.REACT_API_BASE_URL}/update/${record._id}`, {
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/update/${record._id}`, {
             method: "PATCH",
             body: JSON.stringify(archivedPerson),
             headers: {

@@ -34,7 +34,7 @@ export default function Edit() {
             const id = params.id;
             // console.log("Fetching record with id: " + id);
 
-            const response = await fetch(`${process.env.REACT_API_BASE_URL}/record/${id}`);
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/record/${id}`);
             if (!response.ok) {
                 const message = `An error has occurred: ${response.statusText}`;
                 window.alert(message);
@@ -114,7 +114,7 @@ export default function Edit() {
             hardware: form.hardware
         };
 
-        fetch(`${process.env.REACT_API_BASE_URL}/update/${params.id}`, {
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/update/${params.id}`, {
             method: "PATCH",
             body: JSON.stringify(editedPerson),
             headers: {

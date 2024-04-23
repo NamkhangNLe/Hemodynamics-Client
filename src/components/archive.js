@@ -33,7 +33,7 @@ function Archive() {
 
     useEffect(() => {
         async function getRecords() {
-            const response = await fetch(`${process.env.REACT_API_BASE_URL}/record/`);
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/record/`);
             if (!response.ok) {
                 const message = `An error occurred: ${response.statusText}`;
                 window.alert(message);
@@ -67,7 +67,7 @@ function Archive() {
             archived: false
         };
 
-        fetch(`${process.env.REACT_API_BASE_URL}/update/${record._id}`, {
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/update/${record._id}`, {
             method: "PATCH",
             body: JSON.stringify(restoredPerson),
             headers: {
