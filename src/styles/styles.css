@@ -1,0 +1,235 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Makes sure the container takes up the full height of the viewport */
+}
+
+.content-container {
+  display: flex;
+  min-height: 100vh; /* vh stands for viewport height */
+  flex: 1;
+  overflow: auto; /* Allow content to scroll if it's taller than the viewport */
+}
+
+.menu {
+  width: 100%;
+  min-height: calc(100% - 250px);
+  background-color: #212C65;
+  color: #ffffff;
+}
+
+.submenu {
+  width: 100%;
+  min-height: 100%;
+  background-color: #212C65;
+  color: #ffffff;
+  &:hover {
+    background-color: #212C65;
+    color: #29a6cf;
+  }
+}
+
+.submenu-item {
+  color: #ffffff;
+  background-color: #212C65;
+  &:hover {
+    background-color: #212C65;
+    color: #212C65;
+  }
+}
+
+.card.calculation-card {
+  background-color: rgba(164, 164, 164, 0.37);
+  border-width: 0px;
+  min-height: 340px;
+  margin-bottom: 1%;
+  width: 482px;
+}
+
+@media (max-width: 1200px) {
+  .card.calculation-card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card.calculation-card {
+    width: 100%;
+  }
+}
+
+.calculation-grid {
+  padding-top: 2%;
+}
+
+.sidebar {
+  flex: 0 0 50px; /* Fixed width for the sidebar */
+  position: fixed; /* Fix the sidebar position */
+  top: 0; /* Align the sidebar to the top of the viewport */
+  bottom: 0; /* Align the sidebar to the bottom of the viewport */
+  left: 0; /* Align the sidebar to the left of the viewport */
+  background-color: #f0f0f0; /* Optional: Set a background color for the sidebar */
+  z-index: 1; /* Make sure the sidebar appears above other content */
+  overflow-y: auto; /* Allow sidebar to scroll if content is taller than viewport */
+}
+
+.main-content {
+  flex: 1;
+  padding-left: 2%; /* Adjust padding to make room for the fixed sidebar */
+  padding-right: 2%;
+  padding-top:2%;
+  overflow-y: auto; /* Allow main content to scroll if taller than viewport */
+}
+
+.menu-item {
+  background-color: #212C65;
+  &:hover {
+    background-color: #212C65;
+    color: #212C65;
+  }
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  align-items: center;
+  padding-left: 6%;
+}
+
+.button-icon {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  align-items: center;
+  width: 175px;
+}
+
+.fading-div {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(135%, 0); /* Center the div horizontally */
+  width: 20%;
+  height: 15%;
+  background-color: rgb(75, 226, 34, 0.5);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 10px;
+}
+
+.fading-div span {
+  position: absolute; /* Position the span absolutely within the div */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the span horizontally and vertically */
+  font-size: 20px; /* Increase the font size */
+  text-align: center;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+form {
+  padding: 15px;
+  width: 100%;
+}
+
+.form-column-region {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 6px;
+}
+
+.field-label {
+  display: block;
+  width: 120px; /* Define label width */
+  margin-right: 10px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.form-div {
+  padding: 20px;
+}
+
+.subheading {
+  font-style: italic;
+}
+
+.submit-form-section {
+  margin: 0 auto;
+  padding: 10px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  margin: 10px; /* Add spacing between columns */
+  width: 40%; /* Define column width */
+}
+
+.form-region {
+  display: flex;
+  flex-direction: column;
+}
+
+.medication-section {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.form-long-answer {
+  display: flex;
+  flex-direction: column;
+}
+
+.calculation-form {
+  padding: 0px;
+}
+
+@media print {
+  .noPrint {
+    display:none;
+  }
+}
+
+.right-aligned-input {
+  text-align: right;
+}
+
+.patient-history-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.patient-info-card {
+  background-color: rgba(164, 164, 164, 0.37) !important;
+  border-width: 0px !important;
+  margin-bottom: 1% !important;
+}
+
+.confirmation {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 999;
+}
+
+.form {
+  padding: 0px;
+  padding-top: 2%;
+}
